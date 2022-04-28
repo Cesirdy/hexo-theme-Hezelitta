@@ -1,0 +1,77 @@
+<% if(is_post()){ %>
+	<article class="post">
+		<header>
+			<% if (item.title){ %>
+				<h1><%= item.title %></h1>
+			<% } %>
+			<h2 class="headline"><%= item.date.format('MMM DD YYYY') %>
+			<% if (item.categories && item.categories.length){ %>
+				<%
+				var cats = [];
+				item.categories.forEach(function(cat){
+					cats.push('<a href="' + config.root + cat.path + '#' + cat.name + '">' + cat.name + '</a>');
+				});
+				%>
+				<%- cats.join(', ') %>
+			<% } %>
+			</h2>
+		</header>
+	</article>
+<% } %>
+
+<% if (item.toc !== false && theme.toc == true) { %>
+	<div id="post-toc"><%- toc(item.content) %></div>
+<% } %>
+
+<section id="post-body" class="fadeInUp"><%- item.content %></section>
+
+<% if (item.tags && item.tags.length){ %>
+	<%
+	var tags = [];
+	item.tags.forEach(function(tag){
+		tags.push('<a href="' + config.root + tag.path + '#' + tag.name + '">' + tag.name + '</a>');
+	});
+	%>
+	<h2 class="footline">
+		<%- tags.join(', ') %>
+	</h2>
+<% } %>
+
+<% if(is_post()){ %>
+	<footer id="post-meta" class="clearfix">
+		<a href="<%- config.root %><%- theme.profile_link %>">
+		<img class="avatar" src="<%- theme.avatar %>" alt="avatar">
+		<div>
+			<span class="dark"><%= config.title %></span>
+			<span><%= __('updated') %> <%= item.updated.format('MMM DD YYYY') %></span>
+		</div>
+		</a>
+		<section id="back2top">
+			<a href="#">⬆</a>
+		</section>
+	</footer>
+<% } %>
+
+<% if(item.layout == 'links'){ %>
+	<div class="link-container fadeInUp">
+		<% if (site.data.links) { %>
+			<ul class="links-list">
+				<% for (const i in site.data.links) { %>
+					<li>
+						<a href="<%= site.data.links[i].url %>" title="<%= i %>" target="_blank">
+							<img src="<%= site.data.links[i].img %>" alt="<%= i %>">
+							<h3><%= i %></h3>
+							<p><%- site.data.links[i].text %></p>
+						</a>
+					</li>
+				<% } %>
+				</ul>
+		<% } %>
+	</div>
+<% } %>
+
+<%- partial('comment') %>
+
+<% if(is_post()){ %>
+	<link href="<%- theme.css.prism %>" rel="stylesheet" media="print" onload="this.media='all';this.onload=null">
+<% } %>

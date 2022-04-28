@@ -1,0 +1,16 @@
+<% if(is_archive() | is_category()){ %>
+	<%- partial('_pages/category', {}, {cache: true}) %>
+<% } %>
+<% if(is_archive() | is_tag()){ %>
+	<%- partial('_pages/tag', {}, {cache: true}) %>
+<% } %>
+
+<% if(is_archive()){ %>
+	<%- partial('_pages/archive-postlist', {}, {cache: true}) %>
+<% } %>
+<% if(is_category()){ %>
+	<%- partial('_pages/category-postlist') %>
+<% } %>
+<% if(is_tag()){ %>
+	<%- partial('_pages/tag-postlist') %>
+<% } %>

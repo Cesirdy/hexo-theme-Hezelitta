@@ -1,0 +1,27 @@
+<footer id="footer">
+	<div id="social">
+		<p class="small">© 
+			<% if (theme.footer.copyrightSince !== new Date().getFullYear()) { %>
+				<%- theme.footer.copyrightSince %>-<%- new Date().getFullYear() %>
+			<% } else { %>
+				<%- theme.footer.copyrightSince %>
+			<% } %>
+			<a href="<%- config.root %>"> <%= config.author %></a>
+			<% if(theme.footer.beian){ %> /
+				<a href="https://beian.miit.gov.cn"><%- theme.footer.beian %></a>
+			<% } %>
+		</p>
+		<p class="small">
+			Powered By <a href="https://hexo.io">Hexo</a> & Theme <a href="https://github.com/Cesirdy/hexo-theme-Hezelitta"> Hezelitta</a>
+			<% if(theme.footer.upyunlianmeng){ %> /
+				<a class="upyun" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"></a>
+			<% } %>
+			<% if(theme.footer.RSS){ %> /
+				<a href="<%- theme.footer.RSS %>"> RSS</a>
+			<% } %>
+			<% if(theme.footer.sitemap){ %> /
+				<a href="<%- theme.footer.sitemap %>"> Sitemap</a>
+			<% } %>
+		</p>
+	</div>
+</footer>

@@ -1,0 +1,23 @@
+<span class="archive-page-counter fadeInUp">
+	<% var posts_length = site.posts.length %>
+	<%-  _p("counter.archive_posts", site.posts.length) %>
+</span><% var last; %>
+<% site.posts.sort('date', 'desc').each(function(item){ %>
+	<% var year = item.date.year(); %>
+	<% if (last != year){ %>
+		<% if (last != null){ %>
+			</ul>
+			</div>
+		<% } %>
+		<% last = year; %>
+		<div class="archive fadeInUp" id="archive">
+			<ul>
+				<h3 class="archive-title"><%= year %></h3>
+	<% } %>
+	<li class="post-item">
+		<span class="post-time"><%= item.date.format('MMM DD') %></span>
+		<a href="<%- url_for(item.path) %>" class="post-link"><%= item.title || '(' + __('no_title') + ')'  %></a>
+	</li>
+<% }); %>
+			</ul>
+		</div>

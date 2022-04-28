@@ -1,0 +1,25 @@
+<button class="btn" id="loadcmts" onclick="cmts.load();"><%= __('load_comments') %></button>
+<div id="gitment"></div>
+<script src='<%- theme.js.gitment %>'></script>
+<link rel="stylesheet" href='<%- theme.css.gitment %>'>
+<script>
+	var cmts={
+		load:function cmts(){
+			var gitment = new Gitment({
+			<% if(item.title){ %>
+				id: "<%= item.title %>",
+			<% } %>
+				owner: "<%= (theme.gitment.username) %>",
+				repo: "<%= (theme.gitment.repo) %>",
+				oauth: {
+					client_id: "<%= (theme.gitment.id) %>",
+					client_secret: "<%= (theme.gitment.secret) %>",
+				},
+			})
+			gitment.render('gitment');
+			var loadcmt = document.getElementById("loadcmts");
+			var imyourfather = loadcmt.parentNode;
+			imyourfather.removeChild(loadcmts)
+		}
+	}
+</script>

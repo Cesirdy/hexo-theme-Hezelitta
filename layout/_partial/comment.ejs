@@ -1,0 +1,7 @@
+<% if (page.comments !== false) { %>
+    <% if (theme.comment.use) { %>
+  		<section id="comment">
+    		<%- partial('_plugin/' + theme.comment.use + '/main') %>
+        </section>
+    <% } %>
+<% } %>

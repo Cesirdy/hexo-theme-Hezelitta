@@ -1,0 +1,59 @@
+menu: #TITLE: link
+	Archives: archives/
+	About: about/
+	Links: links/
+
+toc: true
+
+avatar: /images/avatar.png
+
+feed:
+	atom: /atom.xml
+	rss: /rss2.xml
+
+footer:
+	copyrightSince: 2022
+	beian: 
+	upyunlianmeng: false
+	RSS: /atom.xml
+	sitemap: /sitemap.xml
+
+comment:
+	use: waline
+
+gitment:
+ username: 
+ repo: 
+ id: 
+ secret: 
+
+waline:
+	serverurl: 
+
+theme_color: 5694f1
+
+disqus_shortname: 
+
+google_analytics:
+	enable: false
+	ID: 
+	api: 
+
+hitokoto: false
+service_worker: true
+lazyload:
+	enable: true
+	onlypost: true
+	field: post # site/post
+
+js: #CDN
+	hitokoto: //v1.hitokoto.cn/?encode=js&select=%23hitokoto
+	lazyload: //cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js
+	service_worker: /sw.js
+	instantpage: //cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js
+	cfga: //cdn.jsdelivr.net/npm/cfga@1.0.3/cfga.min.js
+	gitment: 
+
+css: #CDN
+	gitment: 
+	prism: //cdn.jsdelivr.net/npm/prism-theme-one-dark@1.0.0/prism-onedark.css

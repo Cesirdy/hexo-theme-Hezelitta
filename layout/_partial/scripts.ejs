@@ -1,0 +1,27 @@
+<% if (theme.lazyload){ %>
+	<script async src="<%- theme.js.lazyload %>"></script>
+<% } %>
+
+<script async src="<%- theme.js.instantpage %>" type="module"></script>
+
+<% if (theme.google_analytics.enable){ %>
+	<script>
+		window.ga_tid = "<%- theme.google_analytics.ID %>"; // {String} The trackerID of your site.
+		window.ga_api = "<%- theme.google_analytics.api %>"; // {String} The route of your cloudflare workers you just registered before.
+	</script>
+	<script src="<%- theme.js.cfga %>" async></script>
+<% } %>
+
+<% if (theme.service_worker){ %>
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('<%- theme.js.service_worker %>');
+		}
+	</script>
+<% } %>
+
+<% if (!is_post()&&!is_page()){ %>
+	<% if (theme.hitokoto){ %>
+		<script src="<%- theme.js.hitokoto %>" defer></script>
+	<% } %>
+<% } %>

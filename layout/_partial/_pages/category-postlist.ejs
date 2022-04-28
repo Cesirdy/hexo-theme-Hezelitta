@@ -1,0 +1,11 @@
+<div class="archive  fadeInUp" id="category">
+    <h3 class="archive-title"><%- page.category %></h3>
+    <ul>
+        <% page.posts.sort('date', -1).each(function(item){ %>
+            <div class="post-item">
+                <div class="post-time"><%= item.date.format('MMM DD') %></div>
+                <a href="<%- config.root %><%- item.path %>" class="post-link"><%= item.title || '(' + __('no_title') + ')'  %></a>
+            </div>
+        <% }) %>
+    </ul>
+</div>

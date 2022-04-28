@@ -1,0 +1,27 @@
+#post-list a:hover,#post-list li:hover .dates,#title,#title:hover,a 
+	text-decoration none
+	color color-theme
+#post-list a,button
+	transition all .15s ease
+#post-list 
+	margin-bottom 0
+	li
+		text-align center
+		padding-top 20px
+		padding-bottom 20px
+		list-style-type none
+		margin-bottom 0
+	a 
+		color #333
+		font 700 1.2rem "Helvetica Neue",helvetica,Arial,sans-serif
+		&:before
+			content '「 '
+			color color-theme
+		&:after
+			content ' 」'
+			color color-theme
+	.dates 
+		position relative
+		top 1px
+		font 300 1.1rem "Helvetica Neue",helvetica,Arial,sans-serif
+		color #bbb

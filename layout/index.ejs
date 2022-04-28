@@ -1,0 +1,9 @@
+<ul id="post-list" class="fadeInUp">
+    <% page.posts.each(function(item){ %>
+        <li>
+    		<a href="<%- url_for(item.path) %>"><%= item.title || '(' + __('no_title') + ')'  %></a>
+    		<aside class="dates"><%= item.date.format('MMM DD YYYY') %></aside>
+		</li>
+    <% }); %>
+</ul>
+<%- partial('_partial/pagination') %>
