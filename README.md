@@ -2,8 +2,6 @@
 
 <p align="center"><a href="https://hexo.io/"><img src="https://img.shields.io/badge/Hexo-theme-%230e83cd?style=flat-square"></a> <img src="https://img.shields.io/github/languages/code-size/Cesirdy/hexo-theme-Hezelitta?style=flat-square"> <a href="https://github.com/Cesirdy/"><img src="https://img.shields.io/badge/Author-Cesirdy-%236eacdd?style=flat-square"></a> <img src="https://img.shields.io/github/license/Cesirdy/hexo-theme-Hezelitta?style=flat-square"> <img src="https://img.shields.io/github/last-commit/Cesirdy/hexo-theme-Hezelitta?style=flat-square"></p>
 
-<div align="center"><img src="https://moe-counter.cesirdy.repl.co/get/@hexo-theme-Hezelitta"></div>
-
 基本为个人使用，可配置内容做的一般。
 预览：https://csd.pub （随时可能发生变动）
 
@@ -40,7 +38,7 @@ git clone https://github.com/Cesirdy/hexo-theme-Hezelitta.git themes/Hezelitta
 ## 配置
 ```yaml
 menu: #TITLE: link 导航栏配置
-  归档: Archives/
+  归档: Archives/ #显示的文字：链接
   关于: about/
   链接: links/
 
@@ -91,7 +89,7 @@ js: #CDN
   service_worker: /sw.js
   instantpage: //cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js
   cfga: /js/cfga.js
-  gitment: /js/gitment.browser.js
+  gitment: 
 
 css: #CDN
   gitment: 
@@ -99,9 +97,20 @@ css: #CDN
 ```
 
 ### 友情链接的配置
-1. 运行`hexo n links page`
+1. 创建名为`links`的页面（运行`hexo n links page`）
 2. 进入`source/links`创建`_data`文件夹
 3. `_data`内创建`links.yml`并写入
+    ```yaml
+    "Name":
+      url: url链接
+      img: avatar头像链接
+      text: "description描述"
+
+    "Name":
+      url: url链接
+      img: avatar头像链接
+      text: "description描述"
+    ```
 4. 在`source/links/index.md`页头加入`layout: links`，示例：
    ```yaml
    ---
@@ -112,18 +121,7 @@ css: #CDN
    这里可以写页面内容，跟普通页面一样。
    ```
 
-`links.yml`格式
-```yaml
-"Name":
-  url: url链接
-  img: avatar头像链接
-  text: "description描述"
-  
-"Name":
-  url: url链接
-  img: avatar头像链接
-  text: "description描述"
-```
+
 
 ## 注意
 **你需要注意的是主题为二次开发而来且主要由我个人使用，部分内容年久失修可能造成报错等问题**
