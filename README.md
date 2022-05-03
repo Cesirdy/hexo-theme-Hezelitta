@@ -2,7 +2,7 @@
 
 <p align="center"><a href="https://hexo.io/"><img src="https://img.shields.io/badge/Hexo-theme-%230e83cd?style=flat-square"></a> <img src="https://img.shields.io/github/languages/code-size/Cesirdy/hexo-theme-Hezelitta?style=flat-square"> <a href="https://github.com/Cesirdy/"><img src="https://img.shields.io/badge/Author-Cesirdy-%236eacdd?style=flat-square"></a> <img src="https://img.shields.io/github/license/Cesirdy/hexo-theme-Hezelitta?style=flat-square"> <img src="https://img.shields.io/github/last-commit/Cesirdy/hexo-theme-Hezelitta?style=flat-square"></p>
 
-<div align="center"><img src="https://count.getloli.com/get/@:hexo-theme-Hezelitta"></div>
+<div align="center"><img src="https://moe-counter.cesirdy.repl.co/get/@hexo-theme-Hezelitta"></div>
 
 基本为个人使用，可配置内容做的一般。
 预览：https://csd.pub （随时可能发生变动）
@@ -81,7 +81,6 @@ google_analytics:
   api: #cloudflare-workers-async-google-analytics的api
 
 hitokoto: false #一言 会输出到头部header简介
-service_worker: true #workbox
 lazyload: 
   enable: true #是否打开懒加载
   field: post # site/post 要开启懒加载的位置 全站或只文章页
@@ -129,9 +128,8 @@ css: #CDN
 ## 注意
 **你需要注意的是主题为二次开发而来且主要由我个人使用，部分内容年久失修可能造成报错等问题**
 
-- 文章内toc目录如果跳跃幅度过大会错位，如`<h1>`后下一个标题变成了`<h6>`，反之亦然。
+- 文章内toc目录如果跳跃幅度过大会错位，如`<h1>`后下一个标题变成了`<h6>`，反之亦然。（查了下好像不是我的问题）
 - 必须填入`copyrightSince`
-- Workbox建议自己编写。
 - Google Analytics使用的是[cloudflare-workers-async-google-analytics](https://github.com/SukkaW/cloudflare-workers-async-google-analytics)
 - 一言、Gitment、Disqus用的是很久之前的版本，无法保证还能不能正常工作
 - 使用的代码高亮为prism而非highlight，你需要在网站`_config.yml`里开启prism

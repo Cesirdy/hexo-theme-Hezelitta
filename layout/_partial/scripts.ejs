@@ -12,14 +12,6 @@
 	<script src="<%- theme.js.cfga %>" async></script>
 <% } %>
 
-<% if (theme.service_worker){ %>
-	<script>
-		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('<%- theme.js.service_worker %>');
-		}
-	</script>
-<% } %>
-
 <% if (!is_post()&&!is_page()){ %>
 	<% if (theme.hitokoto){ %>
 		<script src="<%- theme.js.hitokoto %>" defer></script>

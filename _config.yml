@@ -40,7 +40,6 @@ google_analytics:
 	api: 
 
 hitokoto: false
-service_worker: true
 lazyload:
 	enable: true
 	onlypost: true
