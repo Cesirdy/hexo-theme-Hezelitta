@@ -1,12 +1,12 @@
-<span class="category-page-counter">
+<span class="category-page-counter fadeInUp">
 	<% var categories = site.categories.length %>
 	<%-  _p("counter.categories", site.categories.length) %>
 </span>
 <div class="archive fadeInUp" id="category">
 	<ul class="ct-list">
-		<h3 class="archive-title"><%= __('category') %></h3>
+		<h3><%= __('category') %></h3>
 		<% site.categories.map(function(category){  %>
-			<a href="<%- config.root %>categories/<%= category.name %>" title="<%= category.name %>"><%= category.name %><span><%= category.length %></span></a>
+			<a class="ct-item ct-category" href="<%- config.root %>categories/<%= category.name %>" title="<%= category.name %>"><%= category.name %><span class="ct-item-count"><%= category.length %></span></a>
 		<% }) %>
 	</ul>
 </div>

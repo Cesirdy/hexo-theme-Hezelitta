@@ -4,9 +4,9 @@
 	a
 		&:hover
 			text-decoration underline
-	.headerlink
-		&:before
-			content '#'
+.headerlink
+	&:before
+		content '#'
 .home 
 	h1 
 		font-size 30px
@@ -33,50 +33,35 @@
 	.toc-child
 		margin 0.2rem 0 0.2rem 0.5rem
 .post
-	header 
-		text-align center
+	text-align center
 	h1 
 		margin-bottom 0
 		color #222
 		font 300 2rem "Helvetica Neue",Helvetica,Arial,sans-serif
 	h2 
-		margin-bottom 40px
 		font 300 1.5rem "Helvetica Neue",Helvetica,Arial,sans-serif
-		color #111
-		&.headline 
-			font-size 1.2rem
-			margin -5px 0 40px 0
-			color color-meta
-			text-transform uppercase
-			letter-spacing 2px
-			display inline-block
-h2 
-	&.footline 
-		font italic 400 .8rem "Helvetica Neue",Helvetica,Arial,sans-serif
-		display inline-block
-		margin 40px 0 -5px 0
-		a 
-			&:before 
-				content "#"
-			&:hover
-				text-decoration underline
-	&.month 
-		width 100%
-		font 700 .8rem "Helvetica Neue",helvetica,Arial,sans-serif
+		font-size 1.2rem
+		margin -5px 0 40px 0
+		color color-meta
 		text-transform uppercase
-		margin-top 40px
-		margin-bottom 10px
-		padding-bottom 10px
-		border-bottom 1px solid #eee
+		letter-spacing 2px
+		display inline-block
+.footline 
+	font italic 400 .8rem "Helvetica Neue",Helvetica,Arial,sans-serif
+	display inline-block
+	margin 40px 0 -5px 0
+	a 
+		&:before 
+			content "#"
+		&:hover
+			text-decoration underline
 #post-meta 
 	font-size .8rem
 	font-weight 700
 	line-height 1.4
 	border-top 1px solid #eee
-	padding-top 40px
-	margin-bottom 40px
-	padding-bottom 40px
-	margin-top 40px
+	padding 40px 0
+	margin 40px 0
 	color #444
 	border-bottom 1px solid #eee
 	div 
@@ -86,17 +71,15 @@ h2
 			color #aaa
 			font-weight 500
 			display block
-			&.dark 
-				color #1e2025
 	img 
-		&.avatar 
-			height 36px
-			width 36px
-			float left
-			border-radius 50%
-			margin-top 3px
-			margin-right 20px
-			box-shadow 0 0 0 3px #fff,0 0 0 4px #eee
+		height 36px
+		width 36px
+		float left
+		border-radius 50%
+		margin 3px 20px 0 0
+		box-shadow 0 0 0 3px #fff,0 0 0 4px #eee
+.dark 
+	color #1e2025
 #back2top 
 	float right
 	margin -2px
@@ -113,8 +96,5 @@ h2
 		background color-theme
 		&:hover 
 			opacity .8
-h1 
-	&.archive 
-		margin-bottom 0
 #comment
 	margin 2rem 0

@@ -40,7 +40,11 @@
 <% if(is_post()){ %>
 	<footer id="post-meta" class="clearfix">
 		<a href="<%- config.root %><%- theme.profile_link %>">
-		<img class="avatar" src="<%- theme.avatar %>" alt="avatar">
+			<% if (theme.lazyload.enable){ %>
+				<img class="avatar lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="<%- theme.avatar %>" alt="avatar">
+			<% }else{ %>
+				<img class="avatar" src="<%- theme.avatar %>" alt="avatar">
+			<% } %>
 		<div>
 			<span class="dark"><%= config.title %></span>
 			<span><%= __('updated') %> <%= item.updated.format('MMM DD YYYY') %></span>
@@ -59,7 +63,11 @@
 				<% for (const i in site.data.links) { %>
 					<li>
 						<a href="<%= site.data.links[i].url %>" title="<%= i %>" target="_blank">
-							<img src="<%= site.data.links[i].img %>" alt="<%= i %>">
+							<% if (theme.lazyload.enable){ %>
+								<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="<%= site.data.links[i].img %>" alt="<%= i %>">
+							<% }else{ %>
+								<img src="<%= site.data.links[i].img %>" alt="<%= i %>">
+							<% } %>
 							<h3><%= i %></h3>
 							<p><%- site.data.links[i].text %></p>
 						</a>
@@ -73,5 +81,20 @@
 <%- partial('comment') %>
 
 <% if(is_post()){ %>
-	<link href="<%- theme.css.prism %>" rel="stylesheet" media="print" onload="this.media='all';this.onload=null">
+	<script>
+		window.onload=function(){
+			if (document.getElementsByTagName('pre')){
+				if(document.getElementsByTagName('code')){
+					const HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+					const cssSrc = '<%- theme.css.prism %>';
+					const style = document.createElement('link');
+					style.setAttribute('rel','stylesheet');
+					style.setAttribute('href', cssSrc);
+					HEAD.appendChild(style);
+				}
+			}else{
+				return false;
+			}
+		}
+	</script>
 <% } %>

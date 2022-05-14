@@ -6,18 +6,14 @@
 	span 
 		transition all .1s linear
 		position relative
-		&.prev 
-			float left
-			&:hover 
-				left -3px
-				.arrow 
-					left -4px
-		&.next 
-			float right
-			&:hover 
-				right -3px
-				.arrow 
-					right -4px
-		.arrow 
-			position relative
-			padding 1px
+.prev 
+	float left
+	:hover .arrow 
+			left -4px
+.next 
+	float right
+	:hover .arrow 
+			right -4px
+.arrow 
+	position relative
+	padding 1px

@@ -14,20 +14,31 @@
 	b, strong
 		color #c6cbd7
 	hr
-		background #2e2e2e
+		background #4b5563
 	.profile 
 		h1
 			color #fff
 	#post-meta 
 		div 
-			span.dark
-				color #c6cbd7
+	.dark
+		color #c6cbd7
 	#post-list 
 		a
 			color #fff
 	#post-meta
-		border-top 1px solid #2e2e2e
-		border-bottom 1px solid #2e2e2e
-		
+		border-top 1px solid #4b5563
+		border-bottom 1px solid #4b5563
+	tr 
+		& > td 
+			border-top 1px solid #272d3f
+		&:nth-child(odd) 
+			& > td 
+				background #151923
+	th,thead th 
+		color #ddd
+		border-bottom 1px solid #323b52
 code[class*="language-"], pre[class*="language-"]
-	padding 0
+	padding 0	
+:root
+	--waline-theme-color color-theme !important
+	--waline-active-color color-theme-alpha !important

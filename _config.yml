@@ -52,7 +52,9 @@ js: #CDN
 	instantpage: //cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js
 	cfga: //cdn.jsdelivr.net/npm/cfga@1.0.3/cfga.min.js
 	gitment: 
+	waline:
 
 css: #CDN
 	gitment: 
 	prism: //cdn.jsdelivr.net/npm/prism-theme-one-dark@1.0.0/prism-onedark.css
+	waline:

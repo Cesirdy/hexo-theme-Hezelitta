@@ -26,9 +26,9 @@ if (is_archive()){
   <meta name="description" content="<%= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
 <% } %>
 <% if (page.keywords){ %>
-  <meta name="keywords" content="<%= page.keywords %>">
+	<meta name="keywords" content="<%= page.keywords %>">
 <% } else if (config.keywords){ %>
-  <meta name="keywords" content="<%= config.keywords %>">
+	<meta name="keywords" content="<%= config.keywords %>">
 <% } %>
 <% if (theme.feed.rss){ %>
 <link rel="alternate" href="<%- theme.feed.rss %>" type="application/rdf+xml" title="<%= config.title %>">

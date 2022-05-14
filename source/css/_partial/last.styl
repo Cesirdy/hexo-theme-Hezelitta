@@ -1,10 +1,8 @@
 .loading
 	display none !important
-
 .fadeInUp
 	animation fadeInUp
 	animation-duration .5s
-
 @keyframes fadeInUp
 	0% 
 		opacity 0
@@ -12,49 +10,39 @@
 	to 
 		opacity 1
 		transform translateZ(0)
-	
-
 @media screen and (max-width:540px)
-	#post-meta
-		margin-top 60px
-
-	h2
-		&.footline
-			font-size .8rem
-
-	h1
-		font-size 2rem
-
-	nav.main-nav a
-		padding 8px
-
-	#post-list li
-		.dates,:before,:after
-			display none
-
-	h2
-		font-size 1.5rem
-		&.headline
-			font-size .8rem
-	h1
-		font-size 24px
-
-	#archive-list,#post-list
-		margin-top 0
-
-	#title
-		font-size 1.1rem
-
-@media screen and (max-width:840px)
 	#wrapper
 		padding 20px 20px 20px 20px
-
-	.archive .post-time
+	#post-meta
+		margin-top 60px
+	.footline
+			font-size .8rem
+	h1
+		font-size 2rem
+	.main-nav a
+		padding 8px
+	#post-list
+		.dates,:before,:after
+			display none
+	#post-list-footer
+		margin-top 20px
+		padding-top 40px
+	h2
+		font-size 1.5rem
+	.headline
+		font-size .8rem
+	h1
+		font-size 24px
+	#archive-list,#post-list
+		margin-top 0
+@media screen and (max-width:840px)
+	#wrapper
+		padding 20px
+	.post-time
 		margin 5px 0
 		width auto
 		font-size .8rem
 		display block
-
 @media screen and (max-width:1024px)
 	#post-toc
 		display none

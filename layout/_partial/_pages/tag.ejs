@@ -1,12 +1,12 @@
-<span class="tag-page-counter">
+<span class="tag-page-counter fadeInUp">
 	<% var tags_length = site.tags.length %>
 	<%-  _p("counter.tags", site.tags.length) %>
 </span>
 <div class="archive fadeInUp" id="tagcloud">
 	<ul class="ct-list">
-		<h3 class="archive-title"><%= __('tagcloud') %></h3>
+		<h3><%= __('tagcloud') %></h3>
 		<% site.tags.map(function(tag){  %>
-			<a href="<%- config.root %>tags/<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %><span><%= tag.length %></span></a>
+			<a class="ct-item ct-tag" href="<%- config.root %>tags/<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %><span class="ct-item-count"><%= tag.length %></span></a>
 		<% }) %>
 	</ul>
 </div>

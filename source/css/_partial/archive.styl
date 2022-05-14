@@ -1,42 +1,37 @@
-.archive .post-link,.ct-list a 
+.post-link,.ct-item
 	color #8a8a8a
-.archive .post-link:hover,.ct-list a:hover 
+.post-link:hover,.ct-item:hover 
 	color color-theme
 	transition .3s ease-out
-.ct-list 
-	a 
-		margin-right 10px
-		font 400 14px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif
-	span 
-		font-style normal
-		font-size .6em
-		vertical-align super
-		opacity .6
-#tagcloud 
-	a 
-		&:before 
-			content '#'
-#tag 
-	h3 
-		&:before 
-			content '#'
+.ct-item 
+	margin-right 10px
+	font 400 14px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif
+.ct-item-count
+	font-style normal
+	font-size .6em
+	vertical-align super
+	opacity .6
+.ct-tag
+	&:before 
+		content '#'
+.archive-tag
+	&:before 
+		content '#'
 .archive 
 	margin 0 0 50px 0
 	font-size 1rem
-	.post-item 
-		padding 0 0 10px
-		overflow-x hidden
-		white-space nowrap
-		list-style none
-	.post-time 
-		display inline-block
-		width 60px
-		margin 0
-		color #8a8a8a
-	ul
+.archive-list
 		content-visibility auto
-.archive-title 
+.post-item 
+	padding 0 0 10px
+	overflow-x hidden
+	white-space nowrap
+	list-style none
+.post-time 
+	display inline-block
+	width 60px
 	margin 0
+	color #8a8a8a
 .archive-page-counter,.category-page-counter,.tag-page-counter
 	font italic 19px/1.3em Georgia,serif
 	display block
