@@ -10,6 +10,19 @@
 	to 
 		opacity 1
 		transform translateZ(0)
+@media screen and (max-width:1024px)
+	#post-toc
+		display none
+@media screen and (max-width:840px)
+	#wrapper
+		padding 20px
+	.post-time
+		margin 5px 0
+		width auto
+		font-size .8rem
+		display block
+	.links-list
+		grid-template-columns repeat(2,minmax(0,1fr))
 @media screen and (max-width:540px)
 	#wrapper
 		padding 20px 20px 20px 20px
@@ -35,14 +48,5 @@
 		font-size 24px
 	#archive-list,#post-list
 		margin-top 0
-@media screen and (max-width:840px)
-	#wrapper
-		padding 20px
-	.post-time
-		margin 5px 0
-		width auto
-		font-size .8rem
-		display block
-@media screen and (max-width:1024px)
-	#post-toc
-		display none
+	.links-list
+		grid-template-columns repeat(1,minmax(0,1fr))
