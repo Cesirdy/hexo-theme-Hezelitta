@@ -48,7 +48,6 @@ lazyload:
 js: #CDN
 	hitokoto: //v1.hitokoto.cn/?encode=js&select=%23hitokoto
 	lazyload: //cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js
-	service_worker: /sw.js
 	instantpage: //cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js
 	cfga: //cdn.jsdelivr.net/npm/cfga@1.0.3/cfga.min.js
 	gitment: 
@@ -56,5 +55,4 @@ js: #CDN
 
 css: #CDN
 	gitment: 
-	prism: //cdn.jsdelivr.net/npm/prism-theme-one-dark@1.0.0/prism-onedark.css
 	waline:

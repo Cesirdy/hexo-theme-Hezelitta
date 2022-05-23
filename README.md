@@ -1,13 +1,12 @@
 基于已经被我删除后又不知道是谁重新传上来的黑历史[*hexo-theme-lightime*](https://github.com/zker-themes/hexo-theme-lightime)二次开发而来。
+讲究一个随意发挥。
 
 <p align="center"><a href="https://hexo.io/"><img src="https://img.shields.io/badge/Hexo-theme-%230e83cd?style=flat-square"></a> <img src="https://img.shields.io/github/languages/code-size/Cesirdy/hexo-theme-Hezelitta?style=flat-square"> <a href="https://github.com/Cesirdy/"><img src="https://img.shields.io/badge/Author-Cesirdy-%236eacdd?style=flat-square"></a> <img src="https://img.shields.io/github/license/Cesirdy/hexo-theme-Hezelitta?style=flat-square"> <img src="https://img.shields.io/github/last-commit/Cesirdy/hexo-theme-Hezelitta?style=flat-square"></p>
 
 基本为个人使用，可配置内容做的一般。
 预览：https://csd.pub （随时可能发生变动）
 
-<p align="center">←浅色 深色→</p>
-
-<div align="center"><img src="https://s2.loli.net/2022/04/28/Pkf6oA5JWFeRmUi.png"></div>
+<div align="center"><img src="https://s2.loli.net/2022/05/24/P4k3XEqjHFxoJLl.png"></div>
 
 ---
 

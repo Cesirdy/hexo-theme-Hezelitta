@@ -1,9 +1,6 @@
 ﻿#post-body
 	p 
 		line-height 1.7
-	a
-		&:hover
-			text-decoration underline
 .headerlink
 	&:before
 		content '#'
@@ -28,8 +25,16 @@
 		position fixed
 		display inline-block
 		text-align left
-		max-width 10rem
-		margin-left 1rem
+		max-width 15rem
+		margin-left 2rem
+		padding 1rem
+		max-height 50vh
+		overflow auto
+		background color-background-front
+		&:before
+			content 'TOC'
+			text-align center
+			display block
 	.toc-child
 		margin 0.2rem 0 0.2rem 0.5rem
 .post
@@ -40,61 +45,56 @@
 		font 300 2rem "Helvetica Neue",Helvetica,Arial,sans-serif
 	h2 
 		font 300 1.5rem "Helvetica Neue",Helvetica,Arial,sans-serif
-		font-size 1.2rem
 		margin -5px 0 40px 0
 		color color-meta
 		text-transform uppercase
 		letter-spacing 2px
-		display inline-block
 .footline 
 	font italic 400 .8rem "Helvetica Neue",Helvetica,Arial,sans-serif
-	display inline-block
 	margin 40px 0 -5px 0
 	a 
 		&:before 
 			content "#"
+#post-body,.footline
+	a
 		&:hover
 			text-decoration underline
+	img
+		transition filter .35s ease 0s
+		&:not(.lazyloaded)
+			filter blur(5px)
 #post-meta 
 	font-size .8rem
-	font-weight 700
-	line-height 1.4
-	border-top 1px solid #eee
-	padding 40px 0
+	background color-background-back
+	border-radius 3px
+	padding 20px
 	margin 40px 0
-	color #444
-	border-bottom 1px solid #eee
 	div 
 		margin 0 25px 0 0
 		float left
 		span 
-			color #aaa
 			font-weight 500
 			display block
 	img 
-		height 36px
-		width 36px
+		height 32px
+		width 32px
 		float left
 		border-radius 50%
-		margin 3px 20px 0 0
+		margin 0 20px 0 0
 		box-shadow 0 0 0 3px #fff,0 0 0 4px #eee
+	.btn
+		float right
 .dark 
 	color #1e2025
-#back2top 
-	float right
-	margin -2px
-	a 
-		font-size .8rem
-		font-weight 700
-		margin-top 4px
-		color #fff
-		display inline-block
-		vertical-align middle
-		padding 6px 10px
-		border-radius 4px
-		margin-left 2px
-		background color-theme
-		&:hover 
-			opacity .8
+.btn
+	font-weight 700
+	cursor pointer
+	color color-font
+	padding 6px 10px
+	border-radius 3px
+	background color-background-front
+	&:hover 
+		background color-background-back
 #comment
 	margin 2rem 0
+	text-align center

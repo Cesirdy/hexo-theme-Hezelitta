@@ -1,11 +1,13 @@
 .post-link,.ct-item
-	color #8a8a8a
-.post-link:hover,.ct-item:hover 
-	color color-theme
-	transition .3s ease-out
+	color color-font
 .ct-item 
 	margin-right 10px
-	font 400 14px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif
+	background color-background-back
+	border-radius 3px
+	padding 4px 6px
+	line-height 2
+	&:hover
+		background color-background-front
 .ct-item-count
 	font-style normal
 	font-size .6em
@@ -18,20 +20,24 @@
 	&:before 
 		content '#'
 .archive 
-	margin 0 0 50px 0
-	font-size 1rem
+	margin 0 0 50px
 .archive-list
 		content-visibility auto
 .post-item 
-	padding 0 0 10px
+	padding 5px
+	margin-bottom 5px
+	border-radius 3px
 	overflow-x hidden
 	white-space nowrap
 	list-style none
+	transition .3s ease-out
+	&:hover
+		background color-background-back
 .post-time 
 	display inline-block
 	width 60px
 	margin 0
 	color #8a8a8a
 .archive-page-counter,.category-page-counter,.tag-page-counter
-	font italic 19px/1.3em Georgia,serif
+	font-size 1.2rem
 	display block

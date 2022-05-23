@@ -20,7 +20,7 @@
 <% } %>
 
 <% if (item.toc !== false && theme.toc == true) { %>
-	<div id="post-toc"><%- toc(item.content) %></div>
+	<div id="post-toc"><%- toc(item.content,{list_number:false}) %></div>
 <% } %>
 
 <section id="post-body" class="fadeInUp"><%- item.content %></section>
@@ -50,9 +50,7 @@
 			<span><%= __('updated') %> <%= item.updated.format('MMM DD YYYY') %></span>
 		</div>
 		</a>
-		<section id="back2top">
-			<a href="#">⬆</a>
-		</section>
+		<a href="#" class="btn">⬆</a>
 	</footer>
 <% } %>
 
@@ -79,22 +77,3 @@
 <% } %>
 
 <%- partial('comment') %>
-
-<% if(is_post()){ %>
-	<script>
-		window.onload=function(){
-			if (document.getElementsByTagName('pre')){
-				if(document.getElementsByTagName('code')){
-					const HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
-					const cssSrc = '<%- theme.css.prism %>';
-					const style = document.createElement('link');
-					style.setAttribute('rel','stylesheet');
-					style.setAttribute('href', cssSrc);
-					HEAD.appendChild(style);
-				}
-			}else{
-				return false;
-			}
-		}
-	</script>
-<% } %>
