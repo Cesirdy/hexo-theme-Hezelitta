@@ -9,11 +9,11 @@
 			<% if(item.title){ %>
 				id: "<%= item.title %>",
 			<% } %>
-				owner: "<%= (theme.gitment.username) %>",
-				repo: "<%= (theme.gitment.repo) %>",
+				owner: "<%- theme.comment.gitment.username %>",
+				repo: "<%- theme.comment.gitment.repo %>",
 				oauth: {
-					client_id: "<%= (theme.gitment.id) %>",
-					client_secret: "<%= (theme.gitment.secret) %>",
+					client_id: "<%- theme.comment.gitment.id %>",
+					client_secret: "<%- theme.comment.gitment.secret %>",
 				},
 			})
 			gitment.render('gitment');

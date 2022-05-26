@@ -31,7 +31,6 @@ git clone https://github.com/Cesirdy/hexo-theme-Hezelitta.git themes/Hezelitta
 - 中国特色备案以及白嫖又拍云联盟的页脚
 - 一点简单的前端性能优化
 - Instant.Page和LazyLoad加成
-- 集成了[cloudflare-workers-async-google-analytics](https://github.com/SukkaW/cloudflare-workers-async-google-analytics)，当然你需要自己配置。
 - 多语言支持
 
 ## 配置
@@ -57,42 +56,40 @@ footer:
   sitemap: /sitemap.xml #站点地图
 
 comment:
-  use: waline #使用的评论系统 支持Gitment、Waline、Disqus
+  use: disqus #使用的评论系统
+  gitment:
+   username: 
+   repo: 
+   id: 
+   secret: 
+  disqus:
+    shortname: 
+  disqusjs:
+    shortname: 
+    sitename: 
+    api: 
+    apikey: 
+  waline:
+    serverurl: 
 
-gitment: #Gitment配置
- username: 
- repo: 
- id: 
- secret: 
+theme_color: 5694f1 #部分浏览器可能支持的配置？
 
-waline:
-  serverurl: #waline的serverurl
-
-theme_color: 5694f1 #手机浏览器上的主题色
-
-disqus_shortname: #disqus配置
-
-google_analytics:
-  enable: false #是否打开google analytics
-  ID: #UAID
-  api: #cloudflare-workers-async-google-analytics的api
-
-hitokoto: false #一言 会输出到头部header简介
-lazyload: 
-  enable: true #是否打开懒加载
-  field: post # site/post 要开启懒加载的位置 全站或只文章页
+hitokoto: false
+lazyload:
+  enable: true
+  onlypost: true
+  field: post # site/post
 
 js: #CDN
   hitokoto: //v1.hitokoto.cn/?encode=js&select=%23hitokoto
   lazyload: //cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js
-  service_worker: /sw.js
   instantpage: //cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js
-  cfga: /js/cfga.js
-  gitment: 
+  waline: 
+  discuss: 
+  disqusjs: 
 
 css: #CDN
   gitment: 
-  prism: //cdn.jsdelivr.net/npm/prism-theme-one-dark@1.0.0/prism-onedark.css
 ```
 
 ### 友情链接的配置
@@ -127,7 +124,6 @@ css: #CDN
 
 - 文章内toc目录如果跳跃幅度过大会错位，如`<h1>`后下一个标题变成了`<h6>`，反之亦然。（查了下好像不是我的问题）
 - 必须填入`copyrightSince`
-- Google Analytics使用的是[cloudflare-workers-async-google-analytics](https://github.com/SukkaW/cloudflare-workers-async-google-analytics)
 - 一言、Gitment、Disqus用的是很久之前的版本，无法保证还能不能正常工作
 - 使用的代码高亮为prism而非highlight，你需要在网站`_config.yml`里开启prism
 - **任何程序都是半成品或测试版。**

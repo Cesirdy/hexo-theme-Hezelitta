@@ -4,7 +4,7 @@
 		<% page.posts.sort('date', -1).each(function(item){ %>
 			<div class="post-item">
 				<div class="post-time"><%= item.date.format('MMM DD') %></div>
-				<a href="<%- config.root %><%- item.path %>" class="post-link"><%= item.title || '(' + __('no_title') + ')'  %></a>
+				<a href="<%- url_for(item.path) %>" class="post-link"><%= item.title || '(' + __('no_title') + ')'  %></a>
 			</div>
 		<% }) %>
 	</ul>

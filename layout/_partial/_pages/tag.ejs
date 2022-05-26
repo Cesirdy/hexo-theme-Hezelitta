@@ -6,7 +6,7 @@
 	<ul class="ct-list">
 		<h3><%= __('tagcloud') %></h3>
 		<% site.tags.map(function(tag){  %>
-			<a class="ct-item ct-tag" href="<%- config.root %>tags/<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %><span class="ct-item-count"><%= tag.length %></span></a>
+			<a class="ct-item ct-tag" href="<%- url_for(tag.path) %>" title="<%= tag.name %>"><%= tag.name %><span class="ct-item-count"><%= tag.length %></span></a>
 		<% }) %>
 	</ul>
 </div>

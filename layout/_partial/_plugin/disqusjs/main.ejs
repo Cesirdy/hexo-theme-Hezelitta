@@ -1,26 +1,23 @@
 <a class="btn" id="loadcmts" onclick="cmts.load();"><%= __('load_comments') %></a>
-<div id="waline"></div>
+<div id="disqusjs"></div>
 <script>
 	const cmts={
 		load:function cmts(){
 			const HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
-			const jsSrc = '<%- theme.js.waline %>';
-			const cssSrc = '<%- theme.css.waline %>';
+			const jsSrc = '<%- theme.js.disqusjs %>';
 			const script = document.createElement('script');
-			const style = document.createElement('link');
-			style.setAttribute('rel','stylesheet');
 			script.setAttribute('type','text/javascript');
 			script.onload = function() {
-				Waline.init({
-					el: "#waline",
-					serverURL: "<%- theme.comment.waline.serverurl %>",
-					dark: "auto",
-				})
+				const disqusjs = new DisqusJS({
+				    shortname: '<%- theme.comment.disqusjs.shortname %>',
+				    siteName: '<%- theme.comment.disqusjs.sitename %>',
+				    api: '<%- theme.comment.disqusjs.api %>',
+				    apikey: '<%- theme.comment.disqusjs.apikey %>',
+				});
+				disqusjs.render(document.getElementById('disqusjs'));
 			}
 			script.setAttribute('src', jsSrc);
-			style.setAttribute('href', cssSrc);
 			HEAD.appendChild(script);
-			HEAD.appendChild(style);
 			const loadcmt = document.getElementById("loadcmts");
 			const imyourfather = loadcmt.parentNode;
 			imyourfather.removeChild(loadcmts)

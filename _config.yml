@@ -19,20 +19,24 @@ footer:
 	sitemap: /sitemap.xml
 
 comment:
-	use: waline
-
-gitment:
- username: 
- repo: 
- id: 
- secret: 
-
-waline:
-	serverurl: 
+	use: 
+	gitment:
+	 username: 
+	 repo: 
+	 id: 
+	 secret: 
+	disqus:
+		shortname: 
+	disqusjs:
+		shortname: 
+		sitename: 
+		api: 
+		apikey: 
+	waline:
+		serverurl: 
 
 theme_color: 5694f1
 
-disqus_shortname: 
 
 google_analytics:
 	enable: false
@@ -49,9 +53,9 @@ js: #CDN
 	hitokoto: //v1.hitokoto.cn/?encode=js&select=%23hitokoto
 	lazyload: //cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js
 	instantpage: //cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js
-	cfga: //cdn.jsdelivr.net/npm/cfga@1.0.3/cfga.min.js
-	gitment: 
-	waline:
+	waline: 
+	discuss: 
+	disqusjs: 
 
 css: #CDN
 	gitment: 

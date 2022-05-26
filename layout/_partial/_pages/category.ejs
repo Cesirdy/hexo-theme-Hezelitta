@@ -6,7 +6,7 @@
 	<ul class="ct-list">
 		<h3><%= __('category') %></h3>
 		<% site.categories.map(function(category){  %>
-			<a class="ct-item ct-category" href="<%- config.root %>categories/<%= category.name %>" title="<%= category.name %>"><%= category.name %><span class="ct-item-count"><%= category.length %></span></a>
+			<a class="ct-item ct-category" href="<%- url_for(category.path) %>" title="<%= category.name %>"><%= category.name %><span class="ct-item-count"><%= category.length %></span></a>
 		<% }) %>
 	</ul>
 </div>

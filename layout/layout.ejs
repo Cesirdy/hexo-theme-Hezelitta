@@ -3,9 +3,9 @@
 	<head>
 		<%- partial('_partial/head') %>
 	</head>
-	<body data-instant-intensity="mousedown">
+	<body>
 		<%- fragment_cache('loading', function(){
-			return '<style>.loading{font-size:4em;width:100%;display:block;position:fixed;margin:auto;height:100%;font-weight:700;top:0;left:0;order:9999999;color:transparent;background:#fff;overflow:hidden;animation:loading .5s .5s infinite alternate}@keyframes loading{from{color:transparent}to{color:#aaa}}@media (prefers-color-scheme:dark){.loading{background-color:#181c27}}</style><span class="loading">初めてのLOADING……</span>'
+			return '<style>.loading{font-size:4em;width:100%;display:block;position:fixed;margin:auto;height:100%;font-weight:700;top:0;left:0;order:9999999;color:transparent;background:#fff;overflow:hidden;animation:loading .5s .5s infinite alternate}@keyframes loading{from{color:transparent}to{color:#aaa}}@media (prefers-color-scheme:dark){.loading{background-color:#242933}}</style><span class="loading">初めてのLOADING……</span>'
 		}); %>
 
 		<section id="wrapper" style="display: none">
