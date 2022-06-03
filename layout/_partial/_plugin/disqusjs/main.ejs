@@ -11,6 +11,8 @@
 				const disqusjs = new DisqusJS({
 				    shortname: '<%- theme.comment.disqusjs.shortname %>',
 				    siteName: '<%- theme.comment.disqusjs.sitename %>',
+				    identifier: '<%- page.path %>',
+				    url: '<%- page.permalink %>',
 				    api: '<%- theme.comment.disqusjs.api %>',
 				    apikey: '<%- theme.comment.disqusjs.apikey %>',
 				});
